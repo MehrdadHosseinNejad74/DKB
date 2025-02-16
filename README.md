@@ -66,7 +66,7 @@ The application provides two main endpoints:
 - **Limitation:** Not suitable for multiple instances as each maintains its own cache 
 - **Better Alternative:** **Redis** or other **distributed caches** for scalability.
 
-### **Why MongoDB?**
+### **NOSQL**
 MongoDB is **good for a URL shortener** because:
 - **Fast Reads & Writes:** Quick URL lookups & inserts.
 - **Scalable:** Handles millions of requests via **horizontal scaling**.
