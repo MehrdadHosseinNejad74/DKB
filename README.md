@@ -61,6 +61,7 @@ The application provides two main endpoints:
 - Non-blocking execution ensures **fast response times** for URL lookups.
 
 ### **Caching Strategy**
+- **Purpose:** To reduce database load and speed up URL lookups.
 - **Current:** A simple **in-memory cache** for simplicity ((I just used it here as it is a code sample, in the real world we woud have to go with other distributed cache providers).
 - **Limitation:** Not suitable for multiple instances as each maintains its own cache 
 - **Better Alternative:** **Redis** or other **distributed caches** for scalability.
