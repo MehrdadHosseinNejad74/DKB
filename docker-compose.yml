@@ -1,21 +1,17 @@
 version: '3.8'
 
 services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb://mongo:27017/urlShortener
+
   mongo:
     image: mongo:latest
-    container_name: mongodb
+    restart: always
     ports:
       - "27017:27017"
-    environment:
-      - MONGO_INITDB_DATABASE=urlshortener
-    volumes:
-      - mongo-data:/data/db
-
-  redis:
-    image: redis:latest
-    container_name: redis
-    ports:
-      - "6379:6379"
-
-volumes:
-  mongo-data:

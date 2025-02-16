@@ -1,0 +1,14 @@
+spring:
+  cache:
+    type: SIMPLE
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/urlshortener
+
+server:
+  port: 8080
+
+shortener:
+  hash-length: 8
+  base-url: https://short.ly
+  max-retry: 4
