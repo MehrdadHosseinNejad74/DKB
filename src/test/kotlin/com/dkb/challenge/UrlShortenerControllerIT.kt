@@ -4,9 +4,9 @@ import com.dkb.challenge.controller.UrlShortenerController
 import com.dkb.challenge.exception.OriginalUrlNotFoundException
 import com.dkb.challenge.model.domain.OriginalUrl
 import com.dkb.challenge.model.domain.ShortenedUrl
+import com.dkb.challenge.model.dto.ResolvedUrl
 import com.dkb.challenge.model.dto.ShortenRequest
 import com.dkb.challenge.model.dto.ShortenResponse
-import com.dkb.challenge.model.dto.ResolvedUrl
 import com.dkb.challenge.service.UrlShorteningService
 import com.dkb.challenge.util.toURI
 import com.ninjasquad.springmockk.MockkBean
