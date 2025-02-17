@@ -53,6 +53,8 @@ class UrlShorteningServiceIT @Autowired constructor(
         runBlocking {
             val url = OriginalUrl("https://example.com")
             val short1 = service.shortenUrl(url)
+            cacheManager.getCache("shortenedUrls")?.clear()
+
             val short2 = service.shortenUrl(url)
             coVerify(exactly = 1) { service.generateUniqueHash(url) }
             assertEquals(short1, short2)
